@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home_nav_id"
+        android:title="Home"
+        android:icon="@drawable/bottom_nav_home_pic"/>
+    <item
+        android:id="@+id/concepts_nav_id"
+        android:title="Concepts"
+        android:icon="@drawable/bottom_nav_concept_pic"/>
+
+    <item
+        android:id="@+id/supplications_nav_id"
+        android:title="Supplications"
+        android:icon="@drawable/bottom_nav_supplication_pic"/>
+
+</menu>
