@@ -1,6 +1,7 @@
 package com.example.project_saraat;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -39,6 +40,7 @@ public class onboarding extends AppCompatActivity {
         textView_skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
                 Intent intent = new Intent(onboarding.this,MainActivity.class);
                 startActivity(intent);
                 finish();

@@ -1,6 +1,7 @@
 package com.example.project_saraat;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,7 +25,6 @@ public class Splash_Screen extends AppCompatActivity {
                 public void run() {
                     Intent intent = new Intent(Splash_Screen.this, onboarding.class);
                     startActivity(intent);
-                    //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                 }
             },2000);
@@ -33,13 +33,13 @@ public class Splash_Screen extends AppCompatActivity {
             editor.apply();
         }
         if(FirstTime.equals("No")){
-
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     Intent intent = new Intent(Splash_Screen.this,MainActivity.class);
                     startActivity(intent);
-                    //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                 }
             },2000);

@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/denim_blue</item>
         <item name="colorPrimaryVariant">@color/yellow_100</item>
         <item name="colorOnPrimary">@color/black</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
         <item name="android:statusBarColor" tools:targetApi="l">@color/grey_100</item>
         <!-- Customize your theme here. -->
     </style>
@@ -12,11 +13,13 @@
     <style name="Theme.Project_Saraat.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
     
     <style name="drawernavigationtheme">
         <item name="colorPrimary">@color/denim_blue</item>
         <item name="colorControlHighlight">@color/grey_50</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
     </style>
 
 </resources>
