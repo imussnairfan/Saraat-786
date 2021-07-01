@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -49,13 +50,14 @@ public class onboarding extends AppCompatActivity {
 
     }
 
+    @SuppressLint("ResourceType")
     public void addDotIndicater(int position) {
         dots = new TextView[3];
         dotLayout.removeAllViews();
         for (int i=0; i<dots.length; i++) {
             dots[i] = new TextView(this);
             dots[i].setText(Html.fromHtml("&#8226;"));
-            dots[i].setTextSize(43);
+            dots[i].setTextSize(30);
             dots[i].setTextColor(getResources().getColor(R.color.colorTransparentWhite));
 
             dotLayout.addView(dots[i]);
@@ -63,6 +65,7 @@ public class onboarding extends AppCompatActivity {
         if(dots.length > 0)
         {
             dots[position].setTextColor(getResources().getColor(R.color.colorWhite));
+            dots[position].setTextSize(45);
         }
     }
 

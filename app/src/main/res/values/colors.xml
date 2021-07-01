@@ -20,5 +20,5 @@
     <color name="drawer_upperui_bg">#FF50AEEC</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#FFFFFFFF</color>
-    <color name="colorTransparentWhite">#F2E3E0E0</color>
+    <color name="colorTransparentWhite">#F29E9E9E</color>
 </resources>

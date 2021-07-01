@@ -3,10 +3,15 @@ package com.example.project_saraat;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +28,10 @@ public class Concepts_frag extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    RecyclerView recyclerView;
+    RecyclerViewAdapter2 recyclerViewAdapter;
+    List<Concepts> concepts = new ArrayList<>();
 
     public Concepts_frag() {
         // Required empty public constructor
@@ -59,6 +68,20 @@ public class Concepts_frag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_concepts_frag, container, false);
+        View view = inflater.inflate(R.layout.fragment_concepts_frag, container, false);
+        recyclerView = view.findViewById(R.id.rv_concepts);
+
+        concepts.add(new Concepts("Concept of Flan flan","Concept of flan 1\nConcepto f flan 2\nConcept of flan 3", "THFsdcj vaks dfvd fkasd alsdfg vld sd f WEO EO Fgpi fgP EGpi iefgO  fg EGO egf gfadif gao gfouai gfoa dfoa sdgfayusdg fp sdfoa dsfguadgs fuaysdg fos dfg oaudsf goausdg foas gfoas dugfoa gdoufag sdoufg aodsu fgoad gfouadg fouas gduofg asoudfg aousdg foua sdgfaosdfg aosdf gouasdg foasdg fuoadgfuyad gfuya gdofuy gadsuyf gaosuydg fouasdg fou asdgfoa sdfy sdgfasdg foa dfao sdgfoa dsgfoagdf"));
+        concepts.add(new Concepts("Concept of Flan flan","Concept of flan 1\nConcepto f flan 2\nConcept of flan 3", "THFsdcj vaks dfvd fkasd alsdfg vld sd f WEO EO Fgpi fgP EGpi iefgO  fg EGO egf gfadif gao gfouai gfoa dfoa sdgfayusdg fp sdfoa dsfguadgs fuaysdg fos dfg oaudsf goausdg foas gfoas dugfoa gdoufag sdoufg aodsu fgoad gfouadg fouas gduofg asoudfg aousdg foua sdgfaosdfg aosdf gouasdg foasdg fuoadgfuyad gfuya gdofuy gadsuyf gaosuydg fouasdg fou asdgfoa sdfy sdgfasdg foa dfao sdgfoa dsgfoagdf"));
+        concepts.add(new Concepts("Concept of Flan flan","Concept of flan 1\nConcepto f flan 2\nConcept of flan 3", "THFsdcj vaks dfvd fkasd alsdfg vld sd f WEO EO Fgpi fgP EGpi iefgO  fg EGO egf gfadif gao gfouai gfoa dfoa sdgfayusdg fp sdfoa dsfguadgs fuaysdg fos dfg oaudsf goausdg foas gfoas dugfoa gdoufag sdoufg aodsu fgoad gfouadg fouas gduofg asoudfg aousdg foua sdgfaosdfg aosdf gouasdg foasdg fuoadgfuyad gfuya gdofuy gadsuyf gaosuydg fouasdg fou asdgfoa sdfy sdgfasdg foa dfao sdgfoa dsgfoagdf"));
+        concepts.add(new Concepts("Concept of Flan flan","Concept of flan 1\nConcepto f flan 2\nConcept of flan 3", "THFsdcj vaks dfvd fkasd alsdfg vld sd f WEO EO Fgpi fgP EGpi iefgO  fg EGO egf gfadif gao gfouai gfoa dfoa sdgfayusdg fp sdfoa dsfguadgs fuaysdg fos dfg oaudsf goausdg foas gfoas dugfoa gdoufag sdoufg aodsu fgoad gfouadg fouas gduofg asoudfg aousdg foua sdgfaosdfg aosdf gouasdg foasdg fuoadgfuyad gfuya gdofuy gadsuyf gaosuydg fouasdg fou asdgfoa sdfy sdgfasdg foa dfao sdgfoa dsgfoagdf"));
+        concepts.add(new Concepts("","",""));
+
+        recyclerViewAdapter = new RecyclerViewAdapter2(Concepts_frag.this,concepts);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.hasFixedSize();
+        recyclerView.setAdapter(new RecyclerViewAdapter2(concepts));
+
+        return view;
     }
 }
