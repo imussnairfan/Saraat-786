@@ -20,6 +20,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:elevation="10dp">
+
+
         
         <ImageView
             android:id="@+id/close_contactus"
@@ -38,22 +40,53 @@
             android:paddingBottom="40dp"
             android:orientation="vertical"
             android:layout_marginHorizontal="20dp"
-            android:layout_marginTop="90dp"
+            android:layout_marginTop="40dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/contact_item_bg">
+            android:background="@drawable/contact_item_bg"
+            android:elevation="10dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Muhammad Mussna Irfan:"
-                android:textStyle="bold"
-                android:textSize="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:paddingHorizontal="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/denim_blue"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Muhammad Mussna Irfan:"
+                    android:textColor="@color/denim_blue"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:padding="1dp"
+                android:background="@color/denim_blue"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="mussnairfanxp@gmail.com"
+                android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 />
 
@@ -61,6 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="191089@students.au.edu.pk"
+                android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 />
 
@@ -75,20 +109,51 @@
             android:orientation="vertical"
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="20dp"
-            android:background="@drawable/contact_item_bg">
+            android:background="@drawable/contact_item_bg"
+            android:elevation="10dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Abrar Hassan:"
-                android:textStyle="bold"
-                android:textSize="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:paddingHorizontal="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/denim_blue"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Abrar Hassan:"
+                    android:textColor="@color/denim_blue"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:padding="1dp"
+                android:background="@color/denim_blue"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="star.ab234@gmail.com"
+                android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 />
 
@@ -96,6 +161,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="191149@students.au.edu.pk"
+                android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 />
 
@@ -110,20 +176,51 @@
             android:orientation="vertical"
             android:layout_marginHorizontal="20dp"
             android:layout_marginVertical="20dp"
-            android:background="@drawable/contact_item_bg">
+            android:background="@drawable/contact_item_bg"
+            android:elevation="10dp">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Eisha Tanveer:"
-                android:textStyle="bold"
-                android:textSize="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:paddingHorizontal="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/denim_blue"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eisha Tanveer:"
+                    android:textColor="@color/denim_blue"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:padding="1dp"
+                android:background="@color/denim_blue"
                 />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="eishatanveer28@gmail.com"
+                android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 />
 
@@ -131,6 +228,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="192023@students.au.edu.pk"
+                android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 />
 

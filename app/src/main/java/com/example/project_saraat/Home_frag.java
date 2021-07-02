@@ -68,11 +68,19 @@ public class Home_frag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home_frag, container, false);
         recyclerView = view.findViewById(R.id.rv_home);
-        highlights.add(new Highlights("Main Heading 1","Sub Heading of main heading 1","This is highlight 1. This is demo highlight. This is demo highlight. This is highlight 1. This is demo highlight. This is demo highlight. This is highlight 1. This is demo highlight. This is demo highlight. This is highlight 1. This is demo highlight. This is demo highlight."));
-        highlights.add(new Highlights("Main Heading 2","Sub Heading of main heading 2","This is highlight 2. This is demo highlight. This is demo highlight. This is highlight 2. This is demo highlight. This is demo highlight. This is highlight 2. This is demo highlight. This is demo highlight. This is highlight 2. This is demo highlight. This is demo highlight."));
-        highlights.add(new Highlights("Main Heading 3","Sub Heading of main heading 3","This is highlight 3. This is demo highlight. This is demo highlight. This is highlight 3. This is demo highlight. This is demo highlight. This is highlight 3. This is demo highlight. This is demo highlight. This is highlight 3. This is demo highlight. This is demo highlight."));
-        highlights.add(new Highlights("Main Heading 4","Sub Heading of main heading 4","This is highlight 4. This is demo highlight. This is demo highlight. This is highlight 4. This is demo highlight. This is demo highlight. This is highlight 4. This is demo highlight. This is demo highlight. This is highlight 4. This is demo highlight. This is demo highlight."));
-        highlights.add(new Highlights("","",""));
+        highlights.add(new Highlights(R.drawable.flash_1));
+        highlights.add(new Highlights(R.drawable.flash_2));
+        highlights.add(new Highlights(R.drawable.flash_3));
+        highlights.add(new Highlights(R.drawable.flash_4));
+        highlights.add(new Highlights(R.drawable.flash_5));
+        highlights.add(new Highlights(R.drawable.flash_6));
+        highlights.add(new Highlights(R.drawable.flash_7));
+        highlights.add(new Highlights(R.drawable.flash_8));
+        highlights.add(new Highlights(R.drawable.flash_9));
+        highlights.add(new Highlights(R.drawable.flash_10));
+        highlights.add(new Highlights(R.drawable.flash_11));
+        highlights.add(new Highlights(R.drawable.flash_12));
+        highlights.add(new Highlights(R.drawable.flash_13));
 
         recyclerViewAdapter = new RecyclerViewAdapter1(Home_frag.this,highlights);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

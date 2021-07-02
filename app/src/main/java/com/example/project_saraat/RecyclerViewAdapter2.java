@@ -47,9 +47,9 @@ public class RecyclerViewAdapter2 extends RecyclerView.Adapter<RecyclerViewAdapt
         TextView textView_MainHeading, textView_SubHeading, textView_Content;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView_MainHeading = itemView.findViewById(R.id.txt_mainheading);
-            textView_SubHeading = itemView.findViewById(R.id.txt_subheading);
-            textView_Content = itemView.findViewById(R.id.txt_content);
+            textView_MainHeading = itemView.findViewById(R.id.txt_highlight);
+            textView_SubHeading = itemView.findViewById(R.id.txt_1);
+            textView_Content = itemView.findViewById(R.id.txt_2);
         }
     }
 }

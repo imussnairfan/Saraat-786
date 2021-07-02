@@ -1,10 +1,12 @@
 package com.example.project_saraat;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -38,9 +40,7 @@ public class RecyclerViewAdapter1 extends RecyclerView.Adapter<RecyclerViewAdapt
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Highlights highlights = highlightsList.get(position);
-        holder.textView_mainHeading.setText(highlights.Main_Heading);
-        holder.textView_subheading.setText(highlights.Sub_Heading);
-        holder.textView_highlights.setText(highlights.Highlight);
+        holder.imageView.setImageResource(highlights.Highlight_Images);
     }
 
     @Override
@@ -49,12 +49,10 @@ public class RecyclerViewAdapter1 extends RecyclerView.Adapter<RecyclerViewAdapt
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textView_mainHeading, textView_subheading, textView_highlights;
+        ImageView imageView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView_mainHeading = itemView.findViewById(R.id.txt_highlight);
-            textView_subheading = itemView.findViewById(R.id.txt_1);
-            textView_highlights = itemView.findViewById(R.id.txt_2);
+            imageView = itemView.findViewById(R.id.imageView);
         }
     }
 }
