@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     FrameLayout frameLayout;
     BottomNavigationView bottomNavigationView;
+    MediaPlayer saraat_sound_track;
 
     DrawerLayout drawerLayout;
     androidx.appcompat.widget.Toolbar toolbar;
@@ -47,7 +49,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setStatusBarColor(android.R.color.transparent);
-
+        saraat_sound_track = MediaPlayer.create(MainActivity.this, R.raw.saraat_sound_track);
+        saraat_sound_track.start();
         frameLayout = findViewById(R.id.container);
         bottomNavigationView = findViewById(R.id.bottom_nav_id);
         toolbar = findViewById(R.id.toolbar);

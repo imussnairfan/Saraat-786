@@ -1,12 +1,15 @@
 package com.example.project_saraat;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
@@ -35,7 +38,19 @@ public class RecyclerViewAdapter2 extends RecyclerView.Adapter<RecyclerViewAdapt
         Concepts concepts = conceptsList.get(position);
         holder.textView_MainHeading.setText(concepts.Heading);
         holder.textView_SubHeading.setText(concepts.SubHeading);
-        holder.textView_Content.setText(concepts.Details);
+        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(v.getRootView().getContext());
+                View dialogView = LayoutInflater.from(v.getRootView().getContext()).inflate(R.layout.dailogue_box_concepts, null);
+                TextView decs;
+                decs = dialogView.findViewById(R.id.descs);
+                decs.setText(concepts.getDetails());
+                builder.setView(dialogView);
+                builder.setCancelable(true);
+                builder.show();
+            }
+        });
     }
 
     @Override
@@ -45,11 +60,12 @@ public class RecyclerViewAdapter2 extends RecyclerView.Adapter<RecyclerViewAdapt
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView textView_MainHeading, textView_SubHeading, textView_Content;
+        LinearLayout linearLayout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textView_MainHeading = itemView.findViewById(R.id.txt_highlight);
             textView_SubHeading = itemView.findViewById(R.id.txt_1);
-            textView_Content = itemView.findViewById(R.id.txt_2);
+            linearLayout = itemView.findViewById(R.id.linearLayout);
         }
     }
 }

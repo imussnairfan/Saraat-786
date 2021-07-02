@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 
 public class Splash_Screen extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class Splash_Screen extends AppCompatActivity {
                 public void run() {
                     Intent intent = new Intent(Splash_Screen.this, onboarding.class);
                     startActivity(intent);
+
                     finish();
                 }
             },2000);
